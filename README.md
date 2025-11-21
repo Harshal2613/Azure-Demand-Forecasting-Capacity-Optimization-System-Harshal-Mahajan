@@ -32,34 +32,57 @@ Architecture of the project:-
 The project integrates multiple technologies to simulate a real enterprise workflow:
 
   1)Data Sources
+  
   i)Snowflake – Historical sales data
+  
   ii)Amazon S3 Bucket – Web behavior & log data
+  
   iii)REST API – Realtime product metadata
 
   2)Azure Components
   i)Azure Data Factory → Orchestrates ingestion pipelines
+  
   ii)Azure Data Lake Gen2 → Central data storage
+  
   iii)Azure Databricks → ETL + ML model training
+  
   iv)Medallion Architecture → Bronze, Silver, Gold layers
+  
   v)Power BI → Final dashboard reporting
+
 
 🧱 Medallion Architecture 
 
   🔶 Bronze Layer – Raw Data
+  
   Direct ingestion from Snowflake, S3, and API
+  
   Minimal transformations
+  
   Schema-aligned storage
+
+
 
   🔷 Silver Layer – Cleaned/Structured Data
   Handling missing values
+  
   Data standardization
+  
   Joining datasets (sales + logs + metadata)
+  
   Time-series feature creation (YearMonth, category mapping)
 
+
+
   🟡 Gold Layer – Analytics & Modeling
+  
   Aggregated datasets
+  
   Feature-engineered tables for ML
+  
   Clean tables for dashboards
+
+
 
 🤖 Machine Learning Pipeline
 
@@ -67,58 +90,102 @@ A dedicated Model Training Notebook trains forecasting models for every product 
 
 The workflow includes:
   1.Loop through each product
+  
   2.Train multiple models:
+  
     i)ARIMA / SARIMA
+    
     ii)Moving Average (MA)
+    
     iii)Naïve Model
+    
     iv)Exponential Smoothing
+    
     v)Prophet 
+    
   3.Compute MAPE for all models
-4.Select best model per product
-5.Generate next-month forecast
-6.Store results in Gold tables
+  
+  4.Select best model per product
+  
+  5.Generate next-month forecast
+  
+  6.Store results in Gold tables
+
+
 
 📊 Power BI Dashboards
 
 The final outputs are visualized through three interactive dashboards:
 
 1️⃣ Sales Overview Dashboard
+
 Total Sales, Avg Sales, Sales Quantity
+
 Category-level contribution
+
 YoY & MoM growth
+
 Monthly Sales Trend
+
 Sales Target vs Actual
 
 2️⃣ Forecasting Overview Dashboard
+
 Total Forecast Quantity
+
 Average MAPE
+
 Best Model per Product
+
 MAPE Quality Distribution
+
 Forecast Reliability
+
 Top 20 Products – Next Month Forecast
+
 Forecast Confidence Gauge
 
 3️⃣ Web Behavior & Conversion Dashboard
+
 Digital Demand Score
+
 Views by Time of Day
+
 Conversion Funnel (Visitors → Views → Add-to-Cart → Purchased)
+
 Category-wise conversion patterns
+
 Linking customer behavior to demand
+
+
 
 🔧 Technologies Used
   Azure Data Factory
+  
   Azure Databricks (PySpark/Python)
+  
   Azure Data Lake Gen2
+  
   Snowflake
+  
   Amazon S3
+  
   REST APIs
+  
   Power BI
+  
   ML models (ARIMA, MA, Naïve, ES, Prophet)
+
+
 
 🎯 Key Outcomes
 
   Unified multi-source retail dataset
+  
   Automated ETL pipeline using Medallion architecture
+  
   Product-wise forecasting with model comparison
+  
   MAPE-based best model selection
+  
   Production-ready dashboards for business decision-making
