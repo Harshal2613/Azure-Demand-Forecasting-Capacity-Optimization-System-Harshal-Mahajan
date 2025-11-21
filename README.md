@@ -12,10 +12,15 @@ This project showcases a complete end-to-end Demand Forecasting & Optimization s
 It demonstrates how real enterprise data—coming from Snowflake, Amazon S3, and REST APIs—can be unified, processed, modeled, and visualized using a scalable architecture.
 Businesses can use this solution to:
 
+
   1.Analyze sales performance
+  
   2.Forecast next-month demand per product
+  
   3.Measure forecasting accuracy
+  
   4.Understand customer behavior & conversion
+  
   5.Optimize inventory & supply decisions
   
 Architecture of the project:-
