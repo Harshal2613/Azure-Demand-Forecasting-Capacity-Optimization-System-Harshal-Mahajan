@@ -129,6 +129,9 @@ Monthly Sales Trend
 
 Sales Target vs Actual
 
+<img width="1687" height="960" alt="image" src="https://github.com/user-attachments/assets/7f46ec8c-abec-4b36-b2fc-1cbd01503de6" />
+
+
 2️⃣ Forecasting Overview Dashboard
 
 Total Forecast Quantity
@@ -145,6 +148,9 @@ Top 20 Products – Next Month Forecast
 
 Forecast Confidence Gauge
 
+<img width="1707" height="960" alt="image" src="https://github.com/user-attachments/assets/ff65e8ae-29d1-4944-b74c-8ee228da47f1" />
+
+
 3️⃣ Web Behavior & Conversion Dashboard
 
 Digital Demand Score
@@ -157,6 +163,7 @@ Category-wise conversion patterns
 
 Linking customer behavior to demand
 
+<img width="1677" height="949" alt="image" src="https://github.com/user-attachments/assets/b6b3304d-c424-4264-9750-9651cf8dd2f5" />
 
 
 🔧 Technologies Used
