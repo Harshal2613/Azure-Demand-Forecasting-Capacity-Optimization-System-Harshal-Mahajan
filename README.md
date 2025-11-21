@@ -21,7 +21,7 @@ Businesses can use this solution to:
   
   4.Understand customer behavior & conversion
   
-  5.Optimize inventory & supply decisions
+  5.Optimizes inventory & supply decisions
   
 Architecture of the project:-
 
